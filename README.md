@@ -19,31 +19,25 @@
 
 Repositório padrão de Magento 2 e suas principais dependências para funcionamento.
 
-<br>
 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-<br>
 
 ### 📝 Requisitos
 
 Para o funcionamento deste repositório será necessário alguns requisitos e dependências instaladas.
-
-<br>
 
 
 - [Docker](https://www.docker.com/)
 - [Composer](https://getcomposer.org/download/)
 - [Magento Authentication Keys](https://devdocs.magento.com/guides/v2.4/install-gde/prereq/connect-auth.html)
 
-<br>
 
 ### 🔧 Passo a passo
 
 Os passos para instalação e funcionamento do repositório:
 
-<br>
 
 1 - Clonar repositório
 
@@ -126,11 +120,8 @@ php bin/magento setup:install \
 
 8 - Acesse: [http://localhost](http://localhost)
 
-<br>
-
-### Parabéns! 🎈
-
-<br>
+    ### Parabéns! 🎈
+---
 
 ## Painéis
 
@@ -140,24 +131,21 @@ php bin/magento setup:install \
 
 **PHPMyAdmin:** http://localhost:8080
 
-<br>
-
+---
 ## Senha admin default
 
 **Username:** admin
 
 **Senha:** admin123
 
-<br>
+---
 
 ## 🔧 Problemas comuns encontrados <a name = "painels"></a>
 
 Alguns problemas que foram encontrados. 
 
-<br>
 
 ### Container Elasticsearch
-<br>
 
 1 - Invalid kernel settings. Elasticsearch requires at least: vm.max_map_count = 262144
 #### **Solução**
@@ -165,7 +153,7 @@ Linux:
 ```
 sudo sysctl -w vm.max_map_count=262144
 ```
-<br>
+---
 
 ## ⛏️ Imagens Utilizadas <a name = "built_using"></a>
 
@@ -173,15 +161,13 @@ sudo sysctl -w vm.max_map_count=262144
 - [mariadb:10.2](https://hub.docker.com/_/mariadb)
 - [docker.io/bitnami/elasticsearch:6](https://hub.docker.com/r/bitnami/elasticsearch)
 
-<br>
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@sidinei_silva](https://github.com/sidinei_silva)
+- [@sidinei-silva](https://github.com/sidinei-silva)
 
 See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
 
-<br>
 
 ## 🎉 Reconhecimentos <a name = "acknowledgement"></a>
 
