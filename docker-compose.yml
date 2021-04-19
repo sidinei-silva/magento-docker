@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     image: webdevops/php-apache-dev:7.3
-    container_name: web
+    container_name: magento_web
     restart: always
     user: application
     environment:
@@ -30,7 +30,7 @@ services:
 
   mysql:
     image: mariadb:10.2
-    container_name: mysql
+    container_name: magento_mysql
     restart: always
     ports:
       - "3306:3306"
@@ -38,10 +38,10 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=magento
     volumes:
-      - mysql:/var/lib/mysql
+      - magento_mysql:/var/lib/mysql
 
   elasticsearch:
-    container_name: elasticsearch
+    container_name: magento_elasticsearch
     image: docker.io/bitnami/elasticsearch:6
     environment:
       - "ES_JAVA_OPTS=-Xms256m -Xmx256m"
@@ -53,12 +53,12 @@ services:
         hard: -1
     mem_limit: 512m
     volumes:
-      - elasticsearch:/bitnami/elasticsearch/data
+      - magento_elasticsearch:/bitnami/elasticsearch/data
     ports:
       - 9200:9200
 
   phpmyadmin:
-    container_name: phpmyadmin
+    container_name: magento_phpmyadmin
     restart: always
     image: phpmyadmin/phpmyadmin:latest
     environment:
@@ -73,7 +73,7 @@ services:
       - mysql
 
 volumes:
-  mysql:
+  magento_mysql:
     driver: local
-  elasticsearch:
+  magento_elasticsearch:
     driver: local
