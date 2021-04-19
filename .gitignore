@@ -55,3 +55,4 @@
 !/generated/.htaccess
 
 .idea/
+.vscode/
