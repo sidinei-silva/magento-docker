@@ -118,9 +118,41 @@ php bin/magento setup:install \
 ```
 <small style="color:orange;">Obs: Altere as informações conforme a necessidade este comando foi testado da seguinte forma, qualquer alteração verificar se esta correta. Nome dos host esta sendo usado o nome do service no docker compose, não alterar!!</small>
 
+10 - Desativando Two Factory no admin
+
+```
+php bin/magento module:disable "Magento_TwoFactorAuth"
+```
+
+11 - Alterando para modo dev no magento 2
+
+```
+php bin/magento deploy:mode:set "developer"
+```
+
+12 - Limpando o cache após mudança de config
+
+```
+php bin/magento cache:flush
+```
+
+13 - Limpando o cache após mudança de config
+
+```
+php bin/magento cache:flush
+```
+
+14 - Fazendo upgrade nas configs
+
+```
+magento_execute setup:upgrade
+```
+
 8 - Acesse: [http://localhost](http://localhost)
 
-    ### Parabéns! 🎈
+``
+Parabéns! 🎈
+``
 ---
 
 ## Painéis
