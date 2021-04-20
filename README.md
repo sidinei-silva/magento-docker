@@ -54,7 +54,7 @@ composer install
 3 - Criar containers do docker
 
 ```
-docker-compose -d up
+docker-compose up -d --build
 ```
 
 4 - Entrar no container magento_web
@@ -95,26 +95,7 @@ php bin/magento sampledata:deploy
 9 - Executar comando de setup do magento
 
 ```
-php bin/magento setup:install \
---admin-firstname=John \
---admin-lastname=Doe \
---admin-email=johndoe@example.com \
---admin-user=admin \
---admin-password='admin123' \
---base-url=http://localhost \
---backend-frontname=admin \
---db-host=mysql \
---db-name=magento \
---db-user=root \
---db-password=root \
---search-engine=elasticsearch6 \
---elasticsearch-host=elasticsearch \
---elasticsearch-port=9200
---use-rewrites=1 \
---language=pt_BR \
---currency=BRL \
---timezone=America/Sao_Paulo \
---use-sample-data
+php bin/magento setup:install --admin-firstname=John --admin-lastname=Doe --admin-email=johndoe@example.com --admin-user=admin --admin-password='admin123' --base-url=http://localhost --backend-frontname=admin --db-host=mysql --db-name=magento --db-user=root --db-password=root --search-engine=elasticsearch6 --elasticsearch-host=elasticsearch --elasticsearch-port=9200 --use-rewrites=1 --language=pt_BR --currency=BRL --timezone=America/Sao_Paulo --use-sample-data
 ```
 <small style="color:orange;">Obs: Altere as informações conforme a necessidade este comando foi testado da seguinte forma, qualquer alteração verificar se esta correta. Nome dos host esta sendo usado o nome do service no docker compose, não alterar!!</small>
 
@@ -136,16 +117,11 @@ php bin/magento deploy:mode:set "developer"
 php bin/magento cache:flush
 ```
 
-13 - Limpando o cache após mudança de config
+
+13 - Fazendo upgrade nas configs
 
 ```
-php bin/magento cache:flush
-```
-
-14 - Fazendo upgrade nas configs
-
-```
-magento_execute setup:upgrade
+php bin/magento setup:upgrade
 ```
 
 8 - Acesse: [http://localhost](http://localhost)
