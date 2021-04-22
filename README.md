@@ -95,7 +95,7 @@ php bin/magento sampledata:deploy
 9 - Executar comando de setup do magento
 
 ```
-php bin/magento setup:install --admin-firstname=John --admin-lastname=Doe --admin-email=johndoe@example.com --admin-user=admin --admin-password='admin123' --base-url=http://localhost --backend-frontname=admin --db-host=mysql --db-name=magento --db-user=root --db-password=root --search-engine=elasticsearch6 --elasticsearch-host=elasticsearch --elasticsearch-port=9200 --use-rewrites=1 --language=pt_BR --currency=BRL --timezone=America/Sao_Paulo --use-sample-data
+php bin/magento setup:install --admin-firstname=John --admin-lastname=Doe --admin-email=johndoe@example.com --admin-user=admin --admin-password='admin123' --base-url=http://localhost --backend-frontname=admin --db-host=mysql --db-name=magento --db-user=root --db-password=root --search-engine=elasticsearch6 --elasticsearch-host=elasticsearch --elasticsearch-port=9200 --use-rewrites=1 --currency=BRL --timezone=America/Sao_Paulo --use-sample-data
 ```
 <small style="color:orange;">Obs: Altere as informações conforme a necessidade este comando foi testado da seguinte forma, qualquer alteração verificar se esta correta. Nome dos host esta sendo usado o nome do service no docker compose, não alterar!!</small>
 
